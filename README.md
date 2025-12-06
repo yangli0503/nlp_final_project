@@ -13,5 +13,6 @@ Dataset: https://www.kaggle.com/datasets/brianblakely/top-100-songs-and-lyrics-f
 Note to run for development:
 
 Run this in your terminal/console to run the application.
+
 streamlit run /~/nlp_final_project/app/app.py
 
