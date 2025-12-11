@@ -26,9 +26,9 @@ Django, Flask or Streamlit.</p>
 
 st.markdown("## References")
 st.html('''
-Dataset: https://www.kaggle.com/datasets/brianblakely/top-100-songs-and-lyrics-from-1959-to-2019
-LDA: https://www.geeksforgeeks.org/machine-learning/latent-dirichlet-allocation-and-topic-modelling/
-Sentiment Analysis: https://www.kaggle.com/datasets/nltkdata/vader-lexicon
-K-Means: https://www.geeksforgeeks.org/machine-learning/elbow-method-for-optimal-value-of-k-in-kmeans/
-Debugging: https://chat.openai.com
+<p><span>Dataset:</span> https://www.kaggle.com/datasets/brianblakely/top-100-songs-and-lyrics-from-1959-to-2019</p>
+<p><span>LDA:</span> https://www.geeksforgeeks.org/machine-learning/latent-dirichlet-allocation-and-topic-modelling/</p>
+<p><span>Sentiment Analysis:</span> https://www.kaggle.com/datasets/nltkdata/vader-lexicon</p>
+<p><span>K-Means:</span> https://www.geeksforgeeks.org/machine-learning/elbow-method-for-optimal-value-of-k-in-kmeans/</p>
+<p><span>Debugging:</span> https://chat.openai.com</p>
 ''')
