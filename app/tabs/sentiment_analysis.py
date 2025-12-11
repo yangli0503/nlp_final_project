@@ -1,15 +1,7 @@
 from Data.data import get_preprocessed_data
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
-from pathlib import Path
-import joblib
-import pyLDAvis
-import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
-import streamlit.components.v1 as components
-import nltk
 import warnings
 warnings.filterwarnings('ignore')
 warnings.filterwarnings("ignore", category=DeprecationWarning, module='jupyter_client')
