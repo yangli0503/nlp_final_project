@@ -5,6 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import matplotlib.pyplot as plt
 import streamlit as st
 from scipy.cluster.hierarchy import dendrogram, linkage
+from nltk.corpus import stopwords
 
 st.header("Dendrogram")
 
@@ -37,7 +38,9 @@ def plot_hierarchical_clusters(linkage_matrix, data, p=100, figure_size=(8,12)):
     st.pyplot(plt.gcf())
 
 df_clean = get_preprocessed_data()
-stop_words = nltk.corpus.stopwords.words('english')
+nltk.data.path.append("nltk_data")
+
+stop_words = stopwords.words("english")
 
 #Add additional stopwords - mostly filler words in songs
 stop_words_custom = ['yeah', 'ya', 'yea', 'oh', 'ohh', 'ooh', 'woah', 'whoa', 'ayy', 'uh', 'na', 'hey', 'la', 'doo', 'da']

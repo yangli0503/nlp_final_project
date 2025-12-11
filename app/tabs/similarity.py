@@ -5,11 +5,15 @@ from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import streamlit as st
+from nltk.corpus import stopwords
+import matplotlib.colors as mcolors
 
 st.header("Song Similarity")
 
 df_clean = get_preprocessed_data()
-stop_words = nltk.corpus.stopwords.words('english')
+nltk.data.path.append("nltk_data")
+
+stop_words = stopwords.words("english")
 
 #Add additional stopwords - mostly filler words in songs
 stop_words_custom = ['yeah', 'ya', 'yea', 'oh', 'ohh', 'ooh', 'woah', 'whoa', 'ayy', 'uh', 'na', 'hey', 'la', 'doo', 'da']
@@ -40,12 +44,6 @@ ordered_centroids = km.cluster_centers_.argsort()[:, ::-1]
 
 # get key features for each cluster
 # get movies belonging to each cluster
-
-cluster_colors = {}
-
-import matplotlib.colors as mcolors
-import streamlit as st
-import matplotlib.pyplot as plt
 
 cluster_colors = {}
 
