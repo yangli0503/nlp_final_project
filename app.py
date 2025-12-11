@@ -1,8 +1,8 @@
 import streamlit as st
 import sys
 from pathlib import Path
-from tabs.download_vader import download_vader
-from tabs.download_spacy_model import download_spacy_model
+from download_vader import download_vader
+from download_spacy_model import download_spacy_model
 
 @st.cache_resource
 def setup_once():
@@ -15,13 +15,13 @@ setup_once()   # runs ONLY the first time
 project_root = Path(__file__).resolve().parent.parent
 sys.path.append(str(project_root))
 
-overview_page = st.Page('about.py', title='About')
+overview_page = st.Page('app/about.py', title='About')
 
 dash_pages = [
-    st.Page('tabs/topics.py', title = 'Topics'),
-    st.Page('tabs/sentiment_analysis.py', title = 'Sentiment Analysis'),
-    st.Page('tabs/similarity.py', title = 'Similarity'),
-    st.Page('tabs/dendrogram.py', title = 'Dendrogram'),
+    st.Page('app/tabs/topics.py', title ='Topics'),
+    st.Page('app/tabs/sentiment_analysis.py', title ='Sentiment Analysis'),
+    st.Page('app/tabs/similarity.py', title ='Similarity'),
+    st.Page('app/tabs/dendrogram.py', title ='Dendrogram'),
 ]
 
 page_navigation = st.navigation({
