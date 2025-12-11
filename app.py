@@ -7,7 +7,7 @@ from download_spacy_model import download_spacy_model
 @st.cache_resource
 def setup_once():
     download_vader()
-    download_spacy_model()
+    # download_spacy_model()
 
 setup_once()   # runs ONLY the first time
 
